@@ -1,1 +1,1 @@
-debians-netinstall cli
+debians-netinstall Cli
