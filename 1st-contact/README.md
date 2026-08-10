@@ -1,0 +1,11 @@
+1st contact with the debian server.
+
+WHO AM I?
+WHAT MACHINE AM I ON?
+WHAT OS?
+WHAT KERNEL?
+WHAT IP?
+WHAT DISK?
+WHAT MEMORY?
+WHAT SERVICES?
+WHAT USERS?
