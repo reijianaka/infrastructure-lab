@@ -43,3 +43,33 @@ lo
 
 *ip route - untuk melihat routing table Linux — yaitu aturan yang menentukan paket jaringan harus dikirim ke mana.
 
+*ping -c 4 10.0.2.2 - ping gateway
+*ping -c 4 1.1.1.1 - ping internet
+*ping -c 4 debian.org - ping DNS
+            - ping → mengirim paket ICMP untuk mengecek apakah host dapat dijangkau.
+            - -c 4 → mengirim 4 paket saja, lalu berhenti.
+            - 10.0.2.2 → alamat IP tujuan.
+
+Interface
+   │
+   ▼
+10.0.2.15              ✅
+   │
+   ▼
+Gateway 10.0.2.2       ✅
+   │
+   ▼
+Internet / 1.1.1.1     ✅
+   │
+   ▼
+DNS → debian.org       ✅
+
+# ping DNS penting karena bisa akses IP belum tentu bisa menerjemahkan nama domain.
+
+*free -h - melihat penggunaan RAM (memori) dan swap pada Linux.
+         - free → menampilkan informasi penggunaan memori.
+         - -h (human-readable) → membuat ukuran lebih mudah dibaca, misalnya Mi, Gi, bukan angka dalam byte.
+
+*lscpu - menampilkan informasi tentang CPU/prosesor pada sistem Linux.
+
+*lsblk - melihat daftar perangkat penyimpanan (storage) dan partisinya di Linux.
