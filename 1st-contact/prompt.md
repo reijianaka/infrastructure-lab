@@ -73,3 +73,38 @@ DNS → debian.org       ✅
 *lscpu - menampilkan informasi tentang CPU/prosesor pada sistem Linux.
 
 *lsblk - melihat daftar perangkat penyimpanan (storage) dan partisinya di Linux.
+
+*df -h -  melihat penggunaan ruang disk/storage dengan format yang mudah dibaca manusia.
+
+*id -  melihat identitas user yang sedang login.
+
+*sudo -l -  melihat perintah apa saja yang boleh dijalankan oleh user menggunakan sudo.
+
+*su - -  berpindah ke user lain, biasanya ke root, sekaligus memuat environment/login shell user tersebut.
+
+
+IDENTITY
+├─ User biasa      → sysadm
+├─ Root access     → tersedia
+├─ Hostname        → debian-sysadmin-01
+├─ OS              → Debian 12 (Bookworm)
+└─ Kernel          → 6.1.0-52-amd64
+
+NETWORK
+├─ Interface       → enp0s3
+├─ IP              → 10.0.2.15/24
+├─ Gateway         → 10.0.2.2
+├─ Internet        → OK
+└─ DNS             → OK
+
+RESOURCES
+├─ CPU             → 2 vCPU
+├─ RAM             → ~2 GiB
+├─ Disk            → 25G
+├─ Root filesystem → /dev/sda1
+└─ Swap            → ~975M
+
+PRIVILEGE
+├─ sysadm          → UID 1000
+├─ sudo            → belum terinstall
+└─ root            → bisa diakses via su -
