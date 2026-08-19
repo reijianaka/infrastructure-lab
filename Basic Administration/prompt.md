@@ -72,3 +72,42 @@ verifikasi
 	- localhost → menunjuk ke komputer sendiri (127.0.0.1).
 
 *exit - keluar dari koneksi
+
+*ss -tulpn - melihat socket/network connection yang sedang aktif, terutama port yang sedang listen.
+	- -t → tampilkan TCP
+	- -u → tampilkan UDP
+	- -l → hanya yang listening
+	- -p → tampilkan process/program yang menggunakan socket
+	- -n → tampilkan alamat dan port dalam bentuk angka, tanpa DNS/service-name lookup
+
+*sudo ss -lntp - melihat socket/network connection yang sedang aktif, khusus TCP yang sedang listening.
+	- -l → listening
+	- -n → tampilkan nomor port
+	- -t → TCP
+	- -p → tampilkan process
+
+
+### Jangan menganggap hanya service yang kita ingat pernah kita install yang sedang berjalan. Selalu inventory listening ports dan services.
+
+
+*sudo systemctl status apache2 - mengecek status service Apache2 di Linux.
+	- sudo → menjalankan perintah dengan hak administrator
+	- systemctl → mengelola service/systemd
+	- status → melihat status service
+	- apache2 → nama service Apache Web Server
+
+*q - Keluar dari tampilan systemctl
+
+*apt list --installed 2>/dev/null | grep '^apache2' -  mengecek apakah paket Apache2 ter-install di sistem, sekaligus melihat versi paketnya.
+	- apt list --installed → menampilkan semua paket yang sudah ter-install.
+	- 2>/dev/null → menyembunyikan pesan error/warning dari apt.
+	- | → meneruskan output perintah pertama ke perintah berikutnya.
+	- grep '^apache2' → hanya mengambil baris yang diawali apache2
+
+*curl -I http://localhost -  mengirim HTTP request ke web server di komputer sendiri dan hanya melihat HTTP header-nya.
+	- curl → melakukan request ke URL.
+	- -I → HEAD request, jadi hanya mengambil HTTP headers, bukan isi halaman.
+	- http://localhost → mengakses web server pada komputer sendiri, biasanya melalui port 80.
+
+*sudo apt install curl - install curl
+
